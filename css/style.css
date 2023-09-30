@@ -199,7 +199,7 @@
 
     /* Styling untuk bagian hero */
     .hero {
-        background-image: url('img/dental-care\ 1.png');
+        background-image: url(../assets/img/home.png);
         background-size: cover;
         color: black;
         text-align: left;
@@ -463,12 +463,82 @@
         margin-top: 10px;
     }
 
+/* ABOUT US */
+
+    .hero-about-us {
+        height: 100vh;
+        width: 100%;
+        background-image: url(../assets/img/about-us.png);
+        background-size: cover;
+    }
+
+    .hero-about-text h1 {              
+        font-size: 50px;
+        font-weight: bolder;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+    }
+
+    /* Styling untuk bagian gambar dan paragraf */
+    .content-wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 80px;
+    }
+
+    .left,
+    .right {
+        display: flex;
+        margin: 10px 0;
+    }
+
+    .right {
+        flex-direction: row-reverse;
+    }
+
+    .left img,
+    .right img {
+        max-width: 25%;
+    }
+
+    .about-text {
+        flex: 1;
+        margin-top: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .left .about-text {
+        margin-left: 30px;
+        text-align: justify;
+    }
+
+    .right .about-text {
+        margin-right: 30px;
+        text-align: justify;
+    }
+
+    .right .about-text h1 {
+        text-align: right;
+    }
+
 /* DENTIST */
 
     .hero-dentist {
         height: 100vh;
         width: 100%;
-        background-image: url('img/dentist.png');
+        background-image: url(../assets/img/dentist.png);
         background-size: cover;
     }
 
@@ -572,7 +642,7 @@
     .hero-services {
         height: 100vh;
         width: 100%;
-        background-image: url('img/services.png');
+        background-image: url(../assets/img/services.png);
         background-size: cover;
     }
 
@@ -693,7 +763,7 @@
     .hero-contact {
         height: 100vh;
         width: 100%;
-        background-image: url('img/contact.png');
+        background-image: url(../assets/img/contact.png);
         background-size: cover;
     }
 
@@ -797,4 +867,93 @@
             margin-left: 0;
             margin-top: 20px;
         }
+    }
+
+/* POPUP FORM */
+    
+    .popup-form {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .popup-content h2 {
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 30px;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 96.5%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    input[type="date"],
+    input[type="time"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    .custom-dropdown select {
+        background-color: #fff;
+        color: #333;
+    }
+    
+    .custom-dropdown select:focus {
+        border-color: #3498db;
+    }
+    
+    .time-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .time-group input {
+        margin-right: 5px;
+    }
+
+    .btn-sbmtAppoinment {
+        width: 100%;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
     }

@@ -7,30 +7,23 @@
     <title>Contact</title>
     <link rel="icon" href="../assets/img/teeth.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .hero-contact {
-            background-image: url('assets/img/contact.png');
-        }
-    </style>
 </head>
 <body>
+    
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="navbar-logo">
-            <!-- <a href="#">Logo</a> -->
-            <H4>Dental Care</H4>
-            <!-- <img src="healthcare_logo.png" alt="Healthcare Logo"> -->
+            <H4>Ventinove</H4>
         </div>
 
         <div class="nav-list">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
                 <li><a href="dentist.html">Dentist</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><button onclick="window.location.href = '../html/book.html'">Booking</button></li>
-                <!-- <li><a href="../html/booking.html">Booking</a></li> -->
+                <li><button id="openPopup">Booking</button></li>
             </ul>
         </div>
 
@@ -41,6 +34,54 @@
         </div>
     </nav>
     <!-- END NAVBAR -->
+
+    <!-- START POP UP BOOKING -->
+    <div class="popup-form" id="popupForm">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h2>MAKE AN APPOINTMENT</h2>
+            <!-- elemen-elemen form reservasi di sini -->
+            <form id="reservation-form" action="/submit" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Number" required>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select Your Service</option>
+                    <option value="Tooth Filling">Tooth Filling</option>
+                    <option value="Tooth Whitening">Tooth Whitening</option>
+                    <option value="Denture Fitting">Denture Fitting</option>
+                    <option value="Dental Health Consultation">Dental Health Consultation</option>
+                    <option value="Tooth Extraction">Tooth Extraction</option>
+                    <option value="Professional Scalling">Professional Scalling</option>
+                    <option value="Dental Check Up">Dental Check Up</option>
+                    <option value="Braces Installation">Braces Installation</option>
+                </select>
+                <select id="doctor" name="doctor" required>
+                    <option value="" disabled selected>Select Your Dentist</option>
+                    <!-- Pilihan dokter akan diperbarui berdasarkan layanan yang dipilih -->
+                </select>
+                <div class="time-group">
+                    <input type="date" id="date" name="date" min="2023-09-29">
+
+                    <select id="time" name="time" required>
+                        <option value="" disabled selected>Select Time</option>
+                        <option value="08:00">08:00 AM</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">01:00 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                    </select> 
+                </div>     
+                <input class="btn-sbmtAppoinment" type="submit" value="Book an Appoinment">
+            </form>
+        </div>
+    </div>
+    <!-- END POP UP BOOKING -->
 
     <!-- Hero Section -->
     <div class="hero-contact">
@@ -86,7 +127,9 @@
         </div>
     </section>
     <!-- End Content Section -->
-
+    
+    <!-- JAVASCRIPT -->
     <script src="js/index.js"></script>
+    <!-- End JAVASCRIPT -->
 </body>
 </html>
