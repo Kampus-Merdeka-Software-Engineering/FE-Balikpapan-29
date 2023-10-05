@@ -1,130 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Page</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Booking</title>
+    <!-- Icon -->
+    <link rel="icon" href="../assets/img/teeth.png" type="image/png">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-        <!-- NAVBAR -->
-        <nav class="navbar" id="navbar">
-            <div class="navbar-logo">
-                <H4>Dental Care</H4>
-            </div>
-    
-            <div class="nav-list">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="dentist.html">Dentist</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button><a href="booking.html">Booking</a></button></li>
-                    <!-- <li><button id="openPopup">Booking</button></li> -->
-                </ul>
-            </div>
-    
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-        <!-- END NAVBAR -->
-
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <h1>Booking Page</h1>
-            <h2>Ventinove Dental Center</h2>
-        </section>
-        <!-- END HERO SECTION -->
-    
-    
-
-    <!-- START FORM Booking -->
-
-        <!-- Tabel untuk menampilkan hasil input -->
-        <div>
-            <h2>Hasil Reservasi</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Service</th>
-                        <th>Doctor</th>
-                        <th>Reservation Date</th>
-                        <th>Reservation Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Menempatkan data reservasi yang diisi oleh pengguna di sini -->
-                </tbody>
-            </table>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-logo">
+            <H4>Ventinove</H4>
         </div>
 
+        <div class="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="dentist.html">Dentist</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button><a href="booking.html">Booking</a></button></li>
+            </ul>
+        </div>
 
-    <div>
-        <form id="reservation-form" action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+    <!-- HERO SECTION -->
+    <section class="hero-booking">
+        <div class="herobooking-text">
+            <h1>MAKE YOUR APPOINTMENT</h1>
+        </div>
+    </section>
+    <!-- END HERO SECTION -->
+    
+    <!-- START CONTENT SECTION -->
+    <!-- Form Booking -->
+    <div class="form">
+        <form id="booking-form" action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="service">Select Service:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Number" required>
+
             <select id="service" name="service" required>
+                <option value="" disabled selected>Select Your Service</option>
                 <option value="Tooth Filling">Tooth Filling</option>
-                    <option value="Tooth Whitening">Tooth Whitening</option>
-                    <option value="Denture Fitting">Denture Fitting</option>
-                    <option value="Dental Health Consultation">Dental Health Consultation</option>
-                    <option value="Tooth Extraction">Tooth Extraction</option>
-                    <option value="Professional Scalling">Professional Scalling</option>
-                    <option value="Dental Check Up">Dental Check Up</option>
-                    <option value="Braces Installation">Braces Installation</option>
-            </select><br>
+                <option value="Tooth Whitening">Tooth Whitening</option>
+                <option value="Denture Fitting">Denture Fitting</option>
+                <option value="Dental Health Consultation">Dental Health Consultation</option>
+                <option value="Tooth Extraction">Tooth Extraction</option>
+                <option value="Professional Scalling">Professional Scalling</option>
+                <option value="Dental Check Up">Dental Check Up</option>
+                <option value="Braces Installation">Braces Installation</option>
+            </select>
 
-            <label for="doctor">Select Doctor:</label>
             <select id="doctor" name="doctor" required>
+                <option value="" disabled selected>Select Your Dentist</option>
                 <!-- Pilihan dokter akan diperbarui berdasarkan layanan yang dipilih -->
-            </select><br>
+            </select>
 
-            <label for="date">Select Date:</label>
-            <input type="date" id="date" name="date" required min="2023-10-05"><br>
+            <div class="time-group">
+                <input type="date" id="date" name="date" min="2023-09-29">
 
-            <label for="time">Select Time:</label>
-            <select id="time" name="time" required>
-                <option value="08:00">08:00 AM</option>
-                <option value="09:00">09:00 AM</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="12:00">12:00 PM</option>
-                <option value="13:00">13:00 PM</option>
-                <option value="14:00">14:00 PM</option>
-                <option value="15:00">15:00 PM</option>
-                <option value="16:00">16:00 PM</option>
-                <option value="17:00">17:00 PM</option>
-            </select><br>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Select Time</option>
+                    <option value="08:00">08:00 AM</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                </select> 
+            </div>
 
-            <input type="submit" value="Reservasi" id="submit-button">
-
+            <input type="submit" value="Booking" id="btn-submit-booking">
         </form>
     </div>
 
-    <!-- START FORM Booking -->
+    <!-- Table booking submitted -->
+    <h2 class="tittle-reserv">Reservation List</h2>
+    <div class="table">
+        <table class="list-reserv">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Service</th>
+                    <th>Doctor</th>
+                    <th>Reservation Date</th>
+                    <th>Reservation Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Menempatkan data reservasi yang diisi oleh pengguna di sini -->
+            </tbody>
+        </table>
+    </div>
+    <!-- END CONTENT SECTION -->
 
     <footer>
         
     </footer>
     
-    <script src="./js/index.js"></script>
-    <script src="./js/book.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/booking.js"></script>
 
 </body>
 </html>

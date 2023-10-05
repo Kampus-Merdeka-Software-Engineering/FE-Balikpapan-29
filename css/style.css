@@ -4,11 +4,12 @@
     padding: 0;
 }
 
-    /* Navbar */
-    .navbar{
+/* STYLING NAVBAR */
+
+    .navbar {
         background: white;
         border-radius: 35px;
-        z-index: 1;
+        z-index: 3;
         width: 90%;
         padding: 0px 100px;
         margin-top: 25px;
@@ -17,42 +18,44 @@
         top: 0;
         left: 50%;
         transform: translate(-50%);
-        height: 56px;
+        height: 55px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .nav-list ul{
+    .nav-list ul {
         display: flex;
         align-items: center;
         list-style: none;
         padding: 0;
     }
 
-    .nav-list ul li{
+    .nav-list ul li {
         margin-left: 50px;
     }
 
-    .nav-list ul li a{
+    .nav-list ul li a {
         font-size: 18px;
-        font-weight: bold;
+        font-weight: bolder;
         text-decoration: none;
         color: black;
         display: block;
     }
 
-    .nav-list ul li a:hover{
+    .nav-list ul li a:hover {
         transform: translateY(-3px);
-
     }
 
-    .nav-list ul li button{
+    .nav-list ul li button {
         background: linear-gradient(112.82deg, #2b74fc 19.93%, #6d9ef8 102.22%);
+    }
+
+    .nav-list ul li button a {
         border: none;
-        padding: 8px 16px;
-        font-size: 16px;
-        font-weight: bold;
+        padding: 2px 8px;
+        font-size: 18px;
+        font-weight: bolder;
         color: aliceblue;
         border-radius: 5px;
         cursor: pointer;
@@ -60,19 +63,19 @@
         text-transform: uppercase;
     }
 
-    .nav-list ul li button:hover{
+    .nav-list ul li button:hover {
         transform: translateY(-5px);
     }
 
-    .scroll{
-        background: white;
+    .scroll {
+        background: #eeeff1;
         top: -100px;
-        border-radius: 20px;
+        border-radius: 35px;
         width: 90%;
-        animation: fadedown 0.5s ease 0.8s forwards;
+        animation: fadedown 0.5s ease 0.7s forwards;
     }
 
-    @keyframes fadedown{
+    @keyframes fadedown {
         0%{
             top: -100px;
         }
@@ -81,15 +84,14 @@
         }
     }
 
-    .navbar-logo{
+    .navbar-logo {
         cursor: pointer;
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 22px;
+        font-weight: bold;
         background: linear-gradient(112.82deg, #2b74fc 19.93%, #6d9ef8 102.22%);
         -webkit-background-clip: text;
         color: transparent;
     }
-
 
     /* Tombol hamburger */
     .hamburger-menu {
@@ -107,8 +109,8 @@
         border-radius: 2px;
     }
 
-    /* Responsif */
-    @media (max-width: 767px) {
+    /* Styling Responsif Navbar */
+    @media (max-width: 768px) {
         .navbar {
             padding: 0 20px;
         }
@@ -125,7 +127,7 @@
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             display: none;
-            z-index: 1;
+            z-index: 5;
             transition: 5s;
         }
 
@@ -195,42 +197,37 @@
         }
     }
 
-/* HOME */
+/* STYLING HOMEPAGE */
 
-    /* Styling untuk bagian hero */
+    /* Styling hero section */
     .hero {
-        background-image: url('img/dental-care\ 1.png');
-        background-size: cover;
+        background-image: url(../assets/img/home.png);
+        background-size:cover ;
         color: black;
         text-align: left;
         padding: 100px 20px;
     }
 
-    /* Styling untuk heading 1 */
     .hero h1 {
         font-size: 65px;
-        margin: 0;
         margin: 80px 0px 0px 50px;
     }
 
-    /* Styling untuk heading 2*/
     .hero h2 {
         font-size: 65px;
         margin: 5px 0px 0px 50px;
     }
 
-    /* Styling untuk paragraf penjelasan */
     .hero p {
         font-size: 24px;
+        font-weight: 400;
         line-height: 1.4;
-        padding-top: 0%;
         margin: 10px 500px 0px 50px;
     }
 
-    /* Styling untuk tombol "Make an Appointment" */
-    .btn-appointment {
+    /* Styling button "see more about us" */
+    .btn-hero {
         background-color: black;
-        border: none;
         border-radius: 35px;
         padding: 10px 30px;
         font-size: 20px;
@@ -240,10 +237,196 @@
         display: inline-block;
         margin: 70px 0px 0px 100px;
         cursor: pointer;
+        transition: background-color 0.3s;
     }
 
-    /* Responsif */
+    .btn-hero:hover {
+        background-color: #2f2f2f;
+        color: white;
+    }
+
+    /* Styling section About Us */
+    .section1 {
+        display: flex;
+        align-items: flex-start; 
+        margin: 100px 0px 0px 25px;
+    }
+
+    .section1 img {
+        width: 600px;
+        margin: 0px 20px 0px 25px;
+        border-radius: 30px;
+    }
+
+    .section1-text {
+        margin: 25px 0px 0px 20px;
+    }
+
+    .section1-text h1 {
+        font-size: 40px;
+    }
+
+    .section1-text p {
+        font-size: 18px;
+        padding-top: 15px;
+        margin: 0px 50px 70px 0px;
+    }
+
+    /* Styling button "see more" */
+    .btn-see-more {
+        background-color: #31c7e4;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 7px 30px;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .btn-see-more:hover {
+        background-color: #85bfcb;
+        color: white;
+    }
+
+    /* Styling section Our Services */
+    .section2-title {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .section2-description {
+        font-size: 18px;
+        text-align: center;
+        margin: 50px 150px 50px 150px;
+    }
+
+    .section2-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    /* Styling card services */
+    .section2-card {
+        width: 250px;
+        height: 275px;
+        background-color: white;
+        border-radius: 30px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .section2-card img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 15px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .section2-card h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .section2-card p {
+        font-size: 14px;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+        margin: 15px 15px 15px 15px;
+    }
+
+    /* Styling button 'read more' dalam card */
+    .section2-card .btn-read-more {
+        background-color: none;
+        color: red;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-decoration: none;
+        display: block;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+
+    /* Styling section Our Dentist */
+    .section3 {
+        margin-bottom: 100px;
+    }
+
+    .section3-title {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .section3-description {
+        font-size: 18px;
+        text-align: center;
+        margin: 50px 150px 50px 150px;
+    }
+
+    .section3-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    /* Styling card dentist */
+    .section3-card {
+        width: 280px;
+        height: 450px;
+        background-color: #EFFDFF;
+        border-radius: 30px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .section3-card img {
+        width: 250px;
+        height: 370px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 30px;
+    }
+
+    .section3-card h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .section3-card p {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Responsif Home Page */
     @media (max-width: 767px) {
+        /* Responsif hero section */
         .hero h1 {
             font-size: 40px; 
             margin: 40px 0px 0px 20px; 
@@ -259,56 +442,11 @@
             margin: 10px 0px 0px 20px; 
         }
 
-        .btn-appointment {
+        .btn-hero {
             margin: 40px 0px 0px 20px; 
         }
-    }
 
-    /* Styling untuk bagian about us */
-    .section1 {
-        display: flex;
-        align-items: flex-start; 
-        margin: 100px 0px 0px 25px;
-    }
-
-    /* Styling untuk gambar */
-    .section1 img {
-        width: 600px;
-        margin: 0px 20px 0px 25px;
-        border-radius: 30px;
-    }
-
-    /* Styling untuk teks */
-    .section1-text {
-        flex: 1;
-        margin: 25px 0px 0px 20px;
-    }
-
-    .section1-text h1 {
-        font-size: 40px;
-    }
-
-    .section1-text p {
-        font-size: 18px;
-        padding-top: 15px;
-        margin: 0px 50px 70px 0px;
-    }
-
-    /* Styling untuk tombol "See More" */
-    .btn-see-more {
-        background-color: #07C5E9;
-        color: white;
-        border: none;
-        border-radius: 30px;
-        padding: 7px 30px;
-        font-size: 20px;
-        font-weight: 500;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    /* Responsif */
-    @media (max-width: 767px) {
+        /* Responsif About Us section */
         .section1 {
             flex-direction: column;
         }
@@ -322,153 +460,263 @@
         .section1-text {
             text-align: left;
         }
+
+        /* Responsif Services section */
+        .section2-description {
+            margin: 50px 35px 50px 35px;
+        }
+
+        .section2-card {
+            width: 50%;
+        }
+        
+        .section2-card img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Responsif Dentist section */
+        .section3-description {
+            margin: 50px 35px 50px 35px;
+        }
     }
 
-    /* Styling untuk judul Services */
-    .section2-title {
-        font-size: 40px;
-        font-weight: bold;
-        color: black;
+/* STYLING ABOUT US PAGE */
+
+    /* Styling Hero section */
+    .hero-about-us {
+        height: 100vh;
+        width: 100%;
+        background-image: url(../assets/img/about-us.jpg);
+        background-size: cover;
+        opacity: 0.9;
+    }
+
+    .hero-about-text h1 {              
+        font-size: 50px;
+        font-weight: bolder;
         text-align: center;
-        margin-top: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
     }
 
-    /* Styling untuk paragraf penjelasan Services */
-    .section2-description {
+    /* Styling team section */
+    .team {
+        background-color: #ADD0F9;
+        border-radius: 0 0 25px 25px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding-bottom: 50px;
+    }
+
+    .team-tittle h1 {
+        text-align: left;
+        padding-top: 50px;
+        margin: 0px 0 10px 50px;
+    }
+
+    .text-yellow {
+        color: #ffe100;
+    }
+
+    .team-tittle p {
         font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        margin: 0 0 50px 50px;
+    }
+
+    .our-team {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-team {
         text-align: center;
-        margin: 50px 150px 50px 150px;
+        padding: 30px;
     }
 
-    /* Styling untuk container Services */
-    .section2-container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-top: 30px;
-    }
-
-    /* Styling untuk card Services */
-    .section2-card {
-        width: 250px;
-        height: 275px;
-        background-color: white;
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-    }
-
-    /* Styling untuk gambar dalam card */
-    .section2-card img {
-        display: block;
-        margin: 0 auto;
-        margin-top: 20px;
-        border-radius: 15px;
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Styling untuk judul dalam card */
-    .section2-card h3 {
-        font-size: 18px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    /* Styling untuk paragraf dalam card */
-    .section2-card p {
-        font-size: 14px;
-        color: black;
-        text-align: center;
-        margin-top: 10px;
-        margin: 15px 15px 15px 15px;
-    }
-
-    /* Styling untuk tombol Read More dalam card */
-    .section2-card .btn-read-more {
-        background-color: none;
-        color: red;
-        border: none;
-        border-radius: 30px;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-decoration: none;
-        display: block;
-        margin: 20px auto 0;
-        text-align: center;
-    }
-
-    /* Styling untuk judul Dentist */
-    .section3-title {
-        font-size: 40px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        margin-top: 100px;
-    }
-
-    /* Styling untuk paragraf penjelasan Services */
-    .section3-description {
-        font-size: 18px;
-        text-align: center;
-        margin: 50px 150px 50px 150px;
-    }
-
-    /* Styling untuk container section 3 */
-    .section3-container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-top: 30px;
-    }
-
-    /* Styling untuk card section 3 */
-    .section3-card {
+    .grid-team img {
         width: 280px;
-        height: 450px;
-        background-color: #EFFDFF;
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        border-radius: 140px;
+        z-index: 1;
     }
 
-    /* Styling untuk gambar dalam card */
-    .section3-card img {
-        width: 250px;
-        height: 370px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 10px;
-        border-radius: 45px;
+    .label-team {
+        background-image: linear-gradient(350deg, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+        width: 70%;
+        padding: 5px;
+        border-radius: 50px;
+        z-index: 2;
+        position: relative;
+        margin-top: -15%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    /* Styling untuk judul dalam card */
-    .section3-card h3 {
-        font-size: 20px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    /* Styling untuk paragraf dalam card */
-    .section3-card p {
+    #name-team {
         font-size: 16px;
-        color: black;
-        text-align: center;
-        margin-top: 10px;
+        font-weight: bold;
+        color: white;
     }
 
-/* DENTIST */
+    #job-team {
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+    }
+
+    .grid-team p {
+        line-height: 1.5;
+    }
+
+    .grid-team i {
+        font-size: 20px;
+        color: white;
+        line-height: 1.5;
+    }
+
+    /* Styling content wrap */
+    .content-wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 80px;
+    }
+
+    .left,
+    .right {
+        display: flex;
+        margin: 10px 0;
+    }
+
+    .right {
+        flex-direction: row-reverse;
+    }
+
+    .left img,
+    .right img {
+        max-width: 25%;
+    }
+
+    .about-text {
+        flex: 1;
+        margin-top: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .left .about-text {
+        margin-left: 30px;
+        text-align: justify;
+    }
+
+    .right .about-text {
+        margin-right: 30px;
+        text-align: justify;
+    }
+
+    .right .about-text h1 {
+        text-align: right;
+    }
+
+    /* Responsif About Us page */
+    @media screen and (max-width: 768px) {
+
+        /* Styling responsif Hero section */
+        .heroservices-text h1 {
+            font-size: 40px;
+        }
+
+        /* Styling responsif team section */
+        .our-team {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+        
+        .team-tittle h1 {
+            font-size: 24px;
+            text-align: left;
+            padding-top: 50px;
+            margin: 0px 0 10px 50px;
+        }
+    
+        .team-tittle p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .label-team {
+            width: 100%;
+            margin-top: -20%;
+            border-radius: 40px;
+        }
+
+        #name-team {
+            font-size: 16px;
+        }
+    
+        #job-team {
+            font-size: 12px;
+        }
+
+        /* Styling responsif content wrap */
+        .content-wrap {
+            margin: 50px;
+        }
+    
+        .left,
+        .right {
+            flex-direction: column;
+            margin: 25px 0;
+        }
+    
+        .about-text {
+            margin-top: 20px;
+            text-align: justify;
+        }
+    
+        .about-text h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    
+        .about-text p {
+            font-size: 14px;
+        }
+    
+        .left .about-text,
+        .right .about-text h1 {
+            text-align: center;
+        }
+
+        .left .about-text,
+        .right .about-text {
+            margin: 0;
+        }
+    
+        .left img,
+        .right img {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+/* STYLING DENTIST PAGE */
 
     .hero-dentist {
         height: 100vh;
         width: 100%;
-        background-image: url('img/dentist.png');
+        background-image: url(../assets/img/dentist.png);
         background-size: cover;
     }
 
@@ -483,11 +731,16 @@
         color: black;
     }
 
+    .dentist {
+        background-color: #ADD0F9;
+    }
+
     .dentist-tittle {
         font-size: 36px;
         font-weight: bold;
         text-align: center;
-        margin: 50px 0px 50px 0px;
+        margin: 0px 0px 70px 0px;
+        padding-top: 70px;
     }
 
     /* Styling untuk container dentist */
@@ -516,7 +769,7 @@
         display: block;
         margin: 0 auto;
         margin-top: 10px;
-        border-radius: 45px;
+        border-radius: 30px;
     }
 
     /* Styling untuk judul dalam card */
@@ -567,12 +820,13 @@
         }
     }
 
-/* SERVICES */
+/* STYLING SERVICES PAGE */
 
+    /* Styling Hero section */
     .hero-services {
         height: 100vh;
         width: 100%;
-        background-image: url('img/services.png');
+        background-image: url(../assets/img/services.png);
         background-size: cover;
     }
 
@@ -587,33 +841,30 @@
         color: black;
     }
 
-    .services-tittle {
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-        margin: 100px 0px 75px 0px;
+    /* Styling Services section */
+    .services {
+        background-color: #ADD0F9;
     }
 
-    /* Styling untuk container Services */
     .services-container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-top: 30px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-column-gap: 75px;
+        padding: 75px 0px 75px 0px;
     }
 
-    /* Styling untuk card Services */
+    /* Styling card Services */
     .services-card {
         width: 250px;
         height: 275px;
         background-color: white;
         border-radius: 30px;
         padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 50px;
     }
 
-    /* Styling untuk gambar dalam card */
     .services-card img {
         display: block;
         margin: 0 auto;
@@ -623,7 +874,6 @@
         height: 100px;
     }
 
-    /* Styling untuk judul dalam card */
     .services-card h3 {
         font-size: 18px;
         font-weight: bold;
@@ -632,7 +882,6 @@
         margin-top: 15px;
     }
 
-    /* Styling untuk paragraf dalam card */
     .services-card p {
         font-size: 14px;
         color: black;
@@ -640,34 +889,25 @@
         margin: 15px 15px 15px 15px;
     }
 
-    /* Styling untuk tombol Read More dalam card */
-    .services-card .btn-read-more {
-        background-color: none;
-        color: red;
-        border: none;
-        border-radius: 30px;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-decoration: none;
-        display: block;
-        margin: 20px auto 0;
-        text-align: center;
-    }
+    /* Responsif Services Page */
+    @media (max-width: 768px) {
 
-    /* Responsif */
-    @media (max-width: 767px) {
+        /* Styling responsif Hero section */
         .heroservices-text h1 {
             font-size: 40px;
         }
 
-        .services-tittle {
-            font-size: 26px;
+        /* Styling responsif Services section */
+        .services-container {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            padding: 75px 0px 50px 0px;
         }
 
         .services-card {
-            max-width: 30%;
-            height: 100%;
-            margin: 10px auto; 
+            width: 225px;
+            height: 250px;
         }
     
         .services-card img {
@@ -676,24 +916,21 @@
         }
     
         .services-card h3 {
-            font-size: 14px;
+            font-size: 16px;
         }
     
         .services-card p {
-            font-size: 12px;
-        }
-
-        .services-card .btn-read-more {
             font-size: 14px;
         }
     }
 
-/* CONTACT */
+/* STYLING CONTACT PAGE */
 
+    /* Styling Hero section */
     .hero-contact {
         height: 100vh;
         width: 100%;
-        background-image: url('img/contact.png');
+        background-image: url(../assets/img/contact.png);
         background-size: cover;
     }
 
@@ -708,24 +945,52 @@
     }
 
     .contact {
+        background-color: #ADD0F9;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px;
+        padding: 50px;
+        padding-bottom: 100px;
     }
     
+    /* Styling Opening Hours section */
     .contact-left {
         flex: 1;
         padding: 20px;
-        border-radius: 10px;
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .opening-container {
+        margin: 10px 0px 0px 50px;
+    }
+
+    .opening-tittle {
+        background-color: #fff;
+        border: 1px solid #ABB6B9;
+        border-radius: 8px;
+        width: fit-content;
+        padding: 15px 10px;
+        position: relative;
+        z-index: 2;
+        margin: 0 0px -6% 40px;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .opening-list {
+        position: relative;
+        padding: 40px;
+        border: 1px solid #ABB6B9;
+        background-color: #fff;
+        border-radius: 8px;
+        z-index: 1;
+        width: 400px;
+        height: 260px;
     }
     
+    /* Styling form Contact Us section */
     .contact-right {
         flex: 1;
         padding: 20px;
+        margin: 0px 50px 0px 100px;
         background: none;
-        border-radius: 10px;
     }
     
     .contact-right h2 {
@@ -763,14 +1028,15 @@
         font-size: 16px;
     }
     
+    /* Styling button 'Send Message' */
     button {
         background-color: #BABABA;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         color: black;
         border: none;
-        padding: 10px 20px;
+        padding: 7px 18px;
         border-radius: 10px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         cursor: pointer;
     }
@@ -779,85 +1045,356 @@
         background-color: #808080;
     }
 
-    /* Responsif */
-    @media (max-width: 767px) {
+    /* Responsif Contact Us Page*/
+    @media screen and (max-width: 768px) {
+
+        /* Styling responsif Hero section */
+        .herocontact-text h1 {
+            font-size: 40px;
+        }
+
+        /* Styling responsif Opening Hours section */
+        .contact {
+            flex-direction: column;
+        }
+
+        .opening-container {
+            margin: 0;
+        }
+
+        .opening-tittle {
+            margin: 0 0px -7% 40px;
+            font-size: 18px;
+        }
+
+        .opening-list {
+            width: 95%;
+            margin: 10px 0;
+        }
+
+        /* Styling responsif Contact Us section */
+        .contact-right {
+            margin-left: 0;
+            align-items: flex-start;
+        }
+
         .form-inline {
-            display: flex;
-            width: 100%;
             flex-direction: column;
         }
 
         .form-half {
-            width: 100%;
-            margin-right: 10px;
+            margin: 0 0 20px 0;
         }
-    
+
         .form-half-right {
-            width: 100%;
-            margin-left: 0;
-            margin-top: 20px;
+            margin: 0;
         }
     }
 
+/* STYLING BOOKING PAGE */
 
-    /* CSS untuk page BOOKING */
-    form {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Styling Hero section */
+    .hero-booking {
+        height: 100vh;
+        width: 100%;
+        background-image: url(../assets/img/booking.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+    }
+    
+    .herobooking-text h1 {              
+        font-size: 50px;
+        font-weight: bolder;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        z-index: 1;
     }
 
-    form label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
+    /* Styling form booking */
+    .form {
+        width: 50%;
+        margin: auto;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     form input[type="text"],
     form input[type="email"],
-    form input[type="tel"],
-    form select,
+    form input[type="tel"] {
+        width: 96.5%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
     form input[type="date"],
-    form select {
+    form input[type="time"],
+    select {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
         border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-
-    form input[type="submit"] {
-        background-color: #007BFF;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 14px;
         cursor: pointer;
     }
-
-    form input[type="submit"]:hover {
-        background-color: #0056b3;
+    
+    .custom-dropdown select {
+        background-color: #fff;
+        color: #333;
+    }
+    
+    .custom-dropdown select:focus {
+        border-color: #3498db;
+    }
+    
+    .time-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .time-group input {
+        margin-right: 5px;
     }
 
-    /* CSS untuk merapikan tabel hasil */
-    h2 {
-        margin-top: 20px;
-    }
-
-    table {
-        border-collapse: collapse;
+    #btn-submit-booking {
         width: 100%;
-        margin: 20px auto;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
+    .tittle-reserv {
+        margin: 0 0 25px 50px;
+    }
+
+    .table {
+        max-width: 90%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .list-reserv {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .list-reserv thead {
+        display: table-header-group;
+        vertical-align: middle;
+        background-color: #3498db;
+        color: #fff;
+    }
+    
+    .list-reserv th {
         text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .list-reserv tbody tr {
+        text-align: center; /* Memusatkan teks secara horizontal */
+        vertical-align: middle; /* Memusatkan elemen secara vertikal */
+    }
+    
+    .list-reserv tbody tr:nth-child() {
+        background-color: #f2f2f2;
+    }
+    
+    .list-reserv tbody tr:hover {
+        background-color: #ddd;
     }
 
-    th {
-        background-color: #90c4ff;
+    /* STyling responsif Booking page */
+    @media screen and (max-width: 768px) {
+
+        /* Styling responsif Hero section */
+        .herobooking-text h1 {
+            font-size: 40px;
+        }
+
+        .tittle-reserv {
+            margin: 0 0 25px 10px;
+        }
+
+        .table {
+            padding: 10px;
+        }
+
+        .list-reserv th,
+        .list-reserv td {
+            padding: 5px;
+            font-size: 12px;
+        }
+    }
+
+/* FOOTER */
+
+    /* Styling Footer */
+    footer {
+        background-color: #ADD0F9;
+    }
+    
+    .footer {
+        color: #2f2f2f;
+        background-color: #fff;
+        border-top: 1px solid #e5e5e5;
+        border-radius: 30px 30px 0 0;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        position: static;
+    }
+
+    .footer_content {
+        padding: 10px 40px 20px 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__addr {
+        margin: 30px 0px 30px 0px;
+        color: #999;
+    }
+
+    .footer__logo {
+        cursor: pointer;
+        font-size: 40px;
+        font-weight: 700;
+        margin-right: 100px;
+        background: linear-gradient(112.82deg, #2b74fc 19.93%, #6d9ef8 102.22%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .footer__nav {
+        font-weight: 500;
+        margin-bottom: 30px;
+        margin-top: 60px;
+        margin-left: 200px;
+    }
+
+    .footer__nav ul li a {
+        color: black;
+    }
+
+    .nav__services {
+        margin-top: 65px;
+    }
+
+    .nav__services p {
+        font-weight: 500
+    }
+
+    .nav__services ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .nav__services li {
+        flex-basis: calc(50% - 10px);
+        color: #999;
+    }
+
+    .srvc_tittle {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .footer li {
+        line-height: 2em;
+    }
+
+    .footer a {
+        text-decoration: none;
+    }
+
+    .copyright {
+        font-size: 12px;
+        text-align: center;
+        font-weight: 500;
+        background-color: #ADD0F9;
+        padding-bottom: 12px;
+    }
+
+    .copyright::before {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #000;
+        margin-bottom: 10px;
+    }
+
+    /* Responsif footer */
+    @media screen and (max-width: 768px) {
+        .footer_content {
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+        }
+
+        .footer__addr {
+            margin: 30px 0px 30px 0px;
+            color: #999;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer__logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 100px;
+            background: linear-gradient(112.82deg, #2b74fc 19.93%, #6d9ef8 102.22%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .footer__nav {
+            font-size: 14px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .nav__services {
+            margin-top: 0;
+            font-size: 14px;
+        }
+
+        .nav__services ul {
+            margin-top: 10px;
+        }
+        
+        /* Styling responsif copyright */
+        .copyright {
+            margin-top: 20px;
+            font-size: 10px;
+        }
     }
