@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DentalCare</title>
+    <!-- Icon -->
     <link rel="icon" href="../assets/img/teeth.png" type="image/png">
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -24,7 +26,7 @@
                 <li><a href="dentist.html">Dentist</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><button id="openPopup">Booking</button></li>
+                <li><button><a href="booking.html">Booking</a></button></li>
             </ul>
         </div>
 
@@ -36,79 +38,25 @@
     </nav>
     <!-- END NAVBAR -->
 
-    <!-- START POP UP BOOKING -->
-    <div class="popup-form" id="popupForm">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <h2>MAKE AN APPOINTMENT</h2>
-            <!-- elemen-elemen form reservasi di sini -->
-            <form id="reservation-form" action="/submit" method="post">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <input type="tel" id="phone" name="phone" placeholder="Your Number" required>
-                <select id="service" name="service" required>
-                    <option value="" disabled selected>Select Your Service</option>
-                    <option value="Tooth Filling">Tooth Filling</option>
-                    <option value="Tooth Whitening">Tooth Whitening</option>
-                    <option value="Denture Fitting">Denture Fitting</option>
-                    <option value="Dental Health Consultation">Dental Health Consultation</option>
-                    <option value="Tooth Extraction">Tooth Extraction</option>
-                    <option value="Professional Scalling">Professional Scalling</option>
-                    <option value="Dental Check Up">Dental Check Up</option>
-                    <option value="Braces Installation">Braces Installation</option>
-                </select>
-                <select id="doctor" name="doctor" required>
-                    <option value="" disabled selected>Select Your Dentist</option>
-                    <!-- Pilihan dokter akan diperbarui berdasarkan layanan yang dipilih -->
-                </select>
-                <div class="time-group">
-                    <input type="date" id="date" name="date" min="2023-09-29">
-
-                    <select id="time" name="time" required>
-                        <option value="" disabled selected>Select Time</option>
-                        <option value="08:00">08:00 AM</option>
-                        <option value="09:00">09:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">01:00 PM</option>
-                        <option value="14:00">02:00 PM</option>
-                        <option value="15:00">03:00 PM</option>
-                        <option value="16:00">04:00 PM</option>
-                        <option value="17:00">05:00 PM</option>
-                    </select> 
-                </div>     
-                <input class="btn-sbmtAppoinment" type="submit" value="Book an Appoinment">
-            </form>
-        </div>
-    </div>
-    <!-- END POP UP BOOKING -->
-
     <!-- HERO SECTION -->
     <section class="hero">
         <h1>Welcome to</h1>
         <h2>Ventinove Dental Care</h2>
-        <p>Perfect places to protect your smile and keep it healthy, with the largest network of dentist nationwide, quick answers 
-        and personalized services</p>
-        <button id="openPopup" class="btn-appointment">Make an Appoinment</button>
+        <p>
+            Perfect places to protect your smile and keep it healthy, with the largest network of dentist nationwide, quick answers and personalized services.
+        </p>
+        <a href="#about-us" class="btn-hero">See More About Us</a>
     </section>
     <!-- END HERO SECTION -->
 
     <!-- SECTION 1 ABOUT US -->
-    <section class="section1">
-        <!-- Gambar -->
-        <img src="assets/img/aboutus-1.png" alt="Deskripsi Gambar">
-
-        <!-- Teks -->
+    <section class="section1" id="about-us">
+        <img src="assets/img/aboutUs-home.png" alt="About Us">
         <div class="section1-text">
             <h1>About Us</h1>
             <p>
-                Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, 
-                mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum 
-                tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. 
+                Ventinove Dental Care is a dentist clinic website belonging to Group 29 Section Balikpapan. This website is designed to help patients with all dental problems to make an appointment for dental treatment with our best specialist doctors. Want to know more about us? check it out!
             </p>
-
-            <!-- Tombol "See More" -->
             <a href="about-us.html" class="btn-see-more">See More</a>
         </div>
     </section>
@@ -118,9 +66,7 @@
     <section class="section2">
         <h2 class="section2-title">Our Services</h2>
         <p class="section2-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. 
-            Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
-            Maecenas eget condimentum velit, sit amet feugiat lectus. 
+            Ventinove has already served more than <b>1000 patients since 2023</b>. Still not sure? Try our dental care at our clinic and achieve the best dental health and your brightest smile with our various services!
         </p>
         <div class="section2-container">
             <!-- Service Card 1 -->
@@ -128,27 +74,27 @@
                 <img src="assets/img/service-1.png" alt="Service 1">
                 <h3>Tooth Filling</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Procedures to treat tooth decay such as cavities.
                 </p>
-                <a href="#" class="btn-read-more">Read More</a>
+                <a href="services.html" class="btn-read-more">Read More</a>
             </div>
             <!-- Service Card 2 -->
             <div class="section2-card">
                 <img src="assets/img/service-8.png" alt="Service 8">
                 <h3>Braces Installation</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Braces installation procedure with a professional dentist.
                 </p>
-                <a href="#" class="btn-read-more">Read More</a>
+                <a href="services.html" class="btn-read-more">Read More</a>
             </div>
             <!-- Service Card 3 -->
             <div class="section2-card">
                 <img src="assets/img/service-4.png" alt="Service 4">
                 <h3>Dental Health Consultation</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Dental problem consultation services with our dentists.     
                 </p>
-                <a href="#" class="btn-read-more">Read More</a>
+                <a href="services.html" class="btn-read-more">Read More</a>
             </div>
         </div>
     </section>
@@ -158,9 +104,8 @@
     <section class="section3">
         <h2 class="section3-title">Our Dentist</h2>
         <p class="section3-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. 
-            Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
-            Maecenas eget condimentum velit, sit amet feugiat lectus. 
+            <b>Our 5+ dentists are ready to treat your dental problems!</b> Starting from general dentists, to other dental specialists. 
+            No need to worry, all of our dentists are experts in their fields
         </p>
         <div class="section3-container">
             <!-- Dentist Card 1 -->
@@ -205,10 +150,10 @@
             
             <div class="footer__nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Dentist</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="dentist.html">Dentist</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -228,14 +173,13 @@
         </div> 
  
         <div class="copyright">
-            <p>Copyright &copy; 2023 All rights reserved | This template was made by GRUP 29</p>
+            <p>Copyright &copy; 2023 All rights reserved | This template was made by GROUP 29</p>
         </div>
     </footer>
     <!-- END FOOTER -->
 
     <!-- JAVASCRIPT -->
     <script src="js/index.js"></script>
-    <!-- END JAVASCRIPT -->
 
 </body>
 </html>

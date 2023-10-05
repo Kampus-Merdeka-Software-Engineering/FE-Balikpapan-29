@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentist</title>
+    <!-- Icon -->
     <link rel="icon" href="../assets/img/teeth.png" type="image/png">
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="navbar-logo">
@@ -21,7 +26,7 @@
                 <li><a href="dentist.html">Dentist</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><button id="openPopup">Booking</button></li>
+                <li><button><a href="booking.html">Booking</a></button></li>
             </ul>
         </div>
 
@@ -33,63 +38,15 @@
     </nav>
     <!-- END NAVBAR -->
 
-    <!-- START POP UP BOOKING -->
-    <div class="popup-form" id="popupForm">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <h2>MAKE AN APPOINTMENT</h2>
-            <!-- elemen-elemen form reservasi di sini -->
-            <form id="reservation-form" action="/submit" method="post">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <input type="tel" id="phone" name="phone" placeholder="Your Number" required>
-                <select id="service" name="service" required>
-                    <option value="" disabled selected>Select Your Service</option>
-                    <option value="Tooth Filling">Tooth Filling</option>
-                    <option value="Tooth Whitening">Tooth Whitening</option>
-                    <option value="Denture Fitting">Denture Fitting</option>
-                    <option value="Dental Health Consultation">Dental Health Consultation</option>
-                    <option value="Tooth Extraction">Tooth Extraction</option>
-                    <option value="Professional Scalling">Professional Scalling</option>
-                    <option value="Dental Check Up">Dental Check Up</option>
-                    <option value="Braces Installation">Braces Installation</option>
-                </select>
-                <select id="doctor" name="doctor" required>
-                    <option value="" disabled selected>Select Your Dentist</option>
-                    <!-- Pilihan dokter akan diperbarui berdasarkan layanan yang dipilih -->
-                </select>
-                <div class="time-group">
-                    <input type="date" id="date" name="date" min="2023-09-29">
-
-                    <select id="time" name="time" required>
-                        <option value="" disabled selected>Select Time</option>
-                        <option value="08:00">08:00 AM</option>
-                        <option value="09:00">09:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">01:00 PM</option>
-                        <option value="14:00">02:00 PM</option>
-                        <option value="15:00">03:00 PM</option>
-                        <option value="16:00">04:00 PM</option>
-                        <option value="17:00">05:00 PM</option>
-                    </select> 
-                </div>     
-                <input class="btn-sbmtAppoinment" type="submit" value="Book an Appoinment">
-            </form>
-        </div>
-    </div>
-    <!-- END POP UP BOOKING -->
-
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <div class="hero-dentist">
         <div class="herodentist-text">
-            <h1>WE CARE ABOUT YOU</h1>
+            <h1>OUR DENTIST</h1>
         </div>
     </div>
-    <!-- End Hero Section -->
+    <!-- HERO SECTION -->
 
-    <!-- Content -->
+    <!-- START CONTENT SECTION -->
     <section class="dentist">
         <h1 class="dentist-tittle">OUR DENTIST</h1>
         <div class="dentist-container">
@@ -147,8 +104,52 @@
             </div>
         </div>
     </section>
-    <!-- End Content Section -->
+    <!-- END CONTENT SECTION -->
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="footer__addr">
+                <h1 class="footer__logo">Ventinove Dental Care</h1>
+                <ul>
+                    <li>Address : Mitlton Str. 26-27 London UK</li>
+                    <li>Phone : +62 812345678999</li>
+                    <li>Email : exampleemail@gmail.com</li>
+                </ul>
+            </div>
+            
+            <div class="footer__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="dentist.html">Dentist</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__services">
+                <p class="srvc__title">Services</p>
+                <ul>
+                    <li>Tooth Filling</li>
+                    <li>Tooth Whitening</li>
+                    <li>Denture Fitting</li>
+                    <li>Dental Health Consultation</li>
+                    <li>Tooth Extraction</li>
+                    <li>Professional Scaling</li>
+                    <li>Dental Checkup</li>
+                    <li>Braces Installation</li>
+                </ul>
+            </div>
+        </div> 
+ 
+        <div class="copyright">
+            <p>Copyright &copy; 2023 All rights reserved | This template was made by GROUP 29</p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- JAVASCRIPT -->
     <script src="js/index.js"></script>
+
 </body>
 </html>
