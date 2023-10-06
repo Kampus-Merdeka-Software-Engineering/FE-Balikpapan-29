@@ -35,6 +35,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ---------------------------------------------------------------------------------------- //
 
+// kode agar hari sebelumnya tida bisa di pilih
+document.addEventListener("DOMContentLoaded", function() {
+    // Mendapatkan elemen input tanggal
+  var dateInput = document.getElementById("date");
+
+  // Mendapatkan tanggal saat ini
+  var currentDate = new Date();
+  var currentDateString = currentDate.toISOString().split('T')[0]; // Format tanggal saat ini menjadi YYYY-MM-DD
+
+  // Mengatur atribut min pada elemen input tanggal ke tanggal saat ini
+  dateInput.setAttribute("min", currentDateString);
+
+});
+
+
+
 // Kode agar hari minggu tidak dapat di pilih, dikarenakan hari libur.
 document.addEventListener("DOMContentLoaded", function () {
   const dateInput = document.getElementById("date");
@@ -101,14 +117,11 @@ function showNotification(title, message) {
           body: message,
           icon: "path/to/icon.png" // Ganti dengan URL ikon Anda
         });
-
-        // Bisa menambahkan event click untuk menangani tindakan lebih lanjut
+        
         notification.onclick = function () {
-          // Lakukan tindakan setelah notifikasi diklik (jika diperlukan)
         };
       } else {
         // Notifikasi ditolak
-        // Anda dapat menampilkan pesan alternatif jika notifikasi tidak diizinkan
         alert(message);
       }
     });
@@ -210,10 +223,8 @@ function displayBooking(booking) {
   }
 
   resultTable.appendChild(row);
-
-  // Setelah menampilkan data, kosongkan formulir untuk reservasi berikutnya jika perlu
-  // reservationForm.reset();
 }
+
 
 // Mendefinisikan fungsi untuk mengambil data reservasi dari API
 async function fetchData() {

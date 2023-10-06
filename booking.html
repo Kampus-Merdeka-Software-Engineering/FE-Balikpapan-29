@@ -9,7 +9,6 @@
     <link rel="icon" href="../assets/img/teeth.png" type="image/png">
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -42,6 +41,7 @@
     <section class="hero-booking">
         <div class="herobooking-text">
             <h1>MAKE YOUR APPOINTMENT</h1>
+            <button id="show-popup-button">How to Payment</button>
         </div>
     </section>
     <!-- END HERO SECTION -->
@@ -115,6 +115,35 @@
             </tbody>
         </table>
     </div>
+
+
+    <!-- Pop-up Penjelasan Pembayaran -->
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <span id="close-button" class="close-btn">&times;</span>
+            <h1>Proses Pembayaran</h1>
+            <p>Terima kasih telah melakukan pemesanan perawatan gigi di Praktek Dental Kami.</p>
+
+             <div class="payment-info">
+                <h2>Cara Pembayaran</h2>
+                <p>Setelah Anda berhasil melakukan pemesanan, kami akan mengirimkan informasi pembayaran melalui email yang Anda berikan saat pemesanan.</p>
+                <p>Silakan ikuti langkah-langkah berikut untuk menyelesaikan pembayaran:</p>
+                <ol>
+                    <li>Cek email Anda untuk menerima instruksi pembayaran.</li>
+                    <li>Gunakan metode pembayaran yang disediakan dalam email.</li>
+                    <li>Selesaikan pembayaran sesuai dengan instruksi yang diberikan.</li>
+                </ol>
+                <p>Setelah pembayaran Anda diverifikasi, janji perawatan gigi Anda akan dikonfirmasi secara resmi.</p>
+            </div>
+
+            <h2>Setelah Kegiatan</h2>
+            <p>Setelah perawatan gigi selesai, Anda akan menerima rincian tagihan akhir jika ada biaya tambahan yang perlu dibayarkan, seperti obat-obatan atau perawatan tambahan.</p>
+            <p>Anda dapat melakukan pembayaran untuk tagihan tambahan ini sesuai dengan instruksi yang diberikan oleh tim kami di klinik dental.</p>
+
+            <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan lebih lanjut mengenai proses pembayaran, jangan ragu untuk menghubungi kami di nomor yang tercantum di halaman <a href="contact.html">Kontak</a>.</p>
+        </div>
+    </div>
+
     <!-- END CONTENT SECTION -->
 
     <footer>
@@ -123,6 +152,7 @@
     
     <script src="js/index.js"></script>
     <script src="js/booking.js"></script>
+    <script src="js/popup.js"></script>
 
 </body>
 </html>

@@ -924,7 +924,7 @@
         }
     }
 
-/* STYLING CONTACT PAGE */
+/* START STYLING CONTACT PAGE */
 
     /* Styling Hero section */
     .hero-contact {
@@ -1091,7 +1091,54 @@
         }
     }
 
-/* STYLING BOOKING PAGE */
+    /* Style for the map section */
+    .map {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 430px;
+    }
+    
+    /* Style for the iframe within the map section */
+    .map iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    /* Responsiveness for the map section */
+    @media screen and (max-width: 768px) {
+        .map {
+        height: 200px;
+        }
+    }
+    
+/* END STYLING CONTACT PAGE */
+
+
+
+/* STARTSTYLING BOOKING PAGE */
+
+    /* CSS untuk tombol "How to Payment" */
+    #show-popup-button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin:  auto;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: fit-content;
+    }
+
+    #show-popup-button:hover {
+        background-color: #0056b3;
+    }
 
     /* Styling Hero section */
     .hero-booking {
@@ -1101,19 +1148,26 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.9;
+        position: relative;
     }
-    
-    .herobooking-text h1 {              
-        font-size: 50px;
-        font-weight: bolder;
-        text-align: center;
+
+    .herobooking-text {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: black;
+        text-align: center;
         z-index: 1;
+        width: 100%;
     }
+
+    .herobooking-text h1 {
+        font-size: 50px;
+        font-weight: bolder;
+        color: black;
+        margin: 0;
+    }
+
 
     /* Styling form booking */
     .form {
@@ -1214,8 +1268,8 @@
     }
     
     .list-reserv tbody tr {
-        text-align: center; /* Memusatkan teks secara horizontal */
-        vertical-align: middle; /* Memusatkan elemen secara vertikal */
+        text-align: center; 
+        vertical-align: middle;
     }
     
     .list-reserv tbody tr:nth-child() {
@@ -1248,6 +1302,75 @@
             font-size: 12px;
         }
     }
+
+    /* CSS untuk pop-up */
+    .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+    }
+
+    .popup-content {
+        background: #fff;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        line-height: 1.9;
+    }
+
+    .popup-content ol {
+        padding-left: 20px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    /* CSS responsif untuk layar berukuran tablet) */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        body {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .popup-content {
+            max-width: 80%; 
+            height: auto; 
+            max-height: 90%; 
+            overflow-y: auto; 
+        }
+    }
+
+    /* CSS responsif untuk tampilan desktop */
+    @media (min-width: 1025px) {
+        .popup-content {
+            max-width: 50%; 
+        }
+        .popup-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: auto; 
+        }
+    }
+
+
+/* END STYLING BOOKING PAGE */
+
 
 /* FOOTER */
 
