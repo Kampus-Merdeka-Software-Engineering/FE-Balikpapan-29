@@ -425,7 +425,8 @@
     }
 
     /* Responsif Home Page */
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
+
         /* Responsif hero section */
         .hero h1 {
             font-size: 40px; 
@@ -711,8 +712,7 @@
         }
     }
 
-/* STYLING DENTIST PAGE */
-
+    /* Styling Hero section */
     .hero-dentist {
         height: 100vh;
         width: 100%;
@@ -731,94 +731,98 @@
         color: black;
     }
 
+    /* Styling css swiper dentits */
     .dentist {
+        padding: 100px 0 100px 0;
         background-color: #ADD0F9;
     }
 
-    .dentist-tittle {
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-        margin: 0px 0px 70px 0px;
-        padding-top: 70px;
+    .swiper {
+        width: 90%;
     }
 
-    /* Styling untuk container dentist */
-    .dentist-container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-top: 30px;
+    .swiper-wrapper {
+        padding: 50px 0 90px 0;
     }
-
-    /* Styling untuk card dentist */
-    .dentist-card {
-        width: 280px;
-        height: 450px;
-        background-color: #EFFDFF;
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-    }
-
-    /* Styling untuk gambar dalam card */
-    .dentist-card img {
+    
+    .slide-card {
+        box-sizing: border-box;
         width: 250px;
-        height: 370px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 10px;
+        height: 420px;
+        background: #EFFDFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        margin: 0 45px 0 60px;
+        padding: 20px;
         border-radius: 30px;
     }
-
-    /* Styling untuk judul dalam card */
-    .dentist-card h3 {
-        font-size: 20px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        margin-top: 10px;
+    
+    .slide-card img {
+        width: 211px;
+            height: 314px;
+            margin-right: 150px;
+            border-radius: 30px;
+            margin: 0 auto;
     }
 
-    /* Styling untuk paragraf dalam card */
-    .dentist-card p {
+    .slide-card h3 {
+        font-size: 20px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+    }
+    
+    .slide-card p {
         font-size: 16px;
         color: black;
         text-align: center;
         margin-top: 10px;
     }
+    
+    .swiper-slide {
+        font-size: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+    }
+    
+    .swiper-slide-active {
+        transform: scale(1.2);
+    }
 
-    /* Responsif */
-    @media (max-width: 767px) {
+    .swiper-pagination-bullet{
+        background-color: #6E93f7;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #4070F4;
+    }
+
+    /* Responsif Dentist page */
+    @media (max-width: 768px) {
+
+        /* Styling responsif Hero Section */
         .herodentist-text h1 {
             font-size: 40px;
         }
 
-        .dentist-tittle {
-            font-size: 26px;
+        /* Styling responsif swiper dentist */
+        .slide-card {
+            margin: 0 auto;
         }
 
-        .dentist-card {
-            width: 25%;
-            margin: 10px auto;
-            height: auto;
+        .swiper-wrapper {
+            padding-top: 0;
+            padding-bottom: 50px;
         }
-    
-        .dentist-card img {
-            width: 100%; 
-            height: 70%; 
-            border-radius: 20px;
+
+        .swiper-slide-active {
+            transform: scale(1);
         }
-    
-        .dentist-card h3 {
-            font-size: 14px; 
-        }
-    
-        .dentist-card p {
-            font-size: 12px; 
-        }
-    }
+}
 
 /* STYLING SERVICES PAGE */
 
@@ -1198,6 +1202,7 @@
     .list-reserv {
         width: 100%;
         border-collapse: collapse;
+        overflow-x: auto;
     }
 
     .list-reserv thead {
@@ -1214,8 +1219,7 @@
     }
     
     .list-reserv tbody tr {
-        text-align: center; /* Memusatkan teks secara horizontal */
-        vertical-align: middle; /* Memusatkan elemen secara vertikal */
+        text-align: justify;
     }
     
     .list-reserv tbody tr:nth-child() {
@@ -1226,7 +1230,13 @@
         background-color: #ddd;
     }
 
-    /* STyling responsif Booking page */
+    .list-reserv td:nth-child(3),
+    .list-reserv td:nth-child(6),
+    .list-reserv td:nth-child(7) {
+        text-align: center;
+    }
+
+    /* Styling responsif Booking page */
     @media screen and (max-width: 768px) {
 
         /* Styling responsif Hero section */
@@ -1234,18 +1244,38 @@
             font-size: 40px;
         }
 
+        /* Styling responsif Reservation list */
         .tittle-reserv {
             margin: 0 0 25px 10px;
         }
 
         .table {
             padding: 10px;
+            max-width: 90%;
+        }
+
+        .list-reserv {
+            max-width: 100%;
+        }
+
+        .list-reserv th {
+            padding: 10px;
         }
 
         .list-reserv th,
         .list-reserv td {
             padding: 5px;
-            font-size: 12px;
+            font-size: 11px;
+        }
+
+        .list-reserv th:nth-child(2),
+        .list-reserv td:nth-child(2) {
+            display: none;
+        }
+
+        .list-reserv td:nth-child(6),
+        .list-reserv td:nth-child(7) {
+            text-align: center;
         }
     }
 

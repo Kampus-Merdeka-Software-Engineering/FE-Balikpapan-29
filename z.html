@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/z.css" />
+  </head>
+  <body oncontextmenu="return false">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-card">
+            <img src="assets/img/dentist-2.png" alt="Dentist 1">
+            <h3>Tatiana Dias D.D.S.</h3>
+                <p>
+                    General Dentist
+                </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-card">
+            <img src="assets/img/dentist-3.png" alt="Dentist 2">
+            <h3>Jaylon Calzoni D.D.S.</h3>
+                <p>
+                    General Dentist
+                </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-card">
+                <img src="assets/img/dentist-1.png" alt="Dentis 3"> 
+                <h3>Jocelyn Dokidis D.D.S.</h3>
+                <p>
+                    Orthodontist
+                </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-card">
+            <img src="assets/img/dentist-4.png" alt="Dentist 4">
+            <h3>Emery Kenter D.D.S.</h3>
+                <p>
+                    Cosmetic Dentist
+                </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-card">
+                <img src="assets/img/dentist-5.png" alt="Dentis 5">
+                <h3>Phillip Aminoff D.D.S.</h3>
+                <p>
+                    Periodontist
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-card">
+                <img src="assets/img/dentist-6.png" alt="Dentis 6">
+                <h3>Carter Dias D.D.S.</h3>
+                <p>
+                    Implantologist
+                </p>
+            </div>
+        </div>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        // Default parameters
+        slidesPerView: 1,
+        loop: true,
+        centeredSlides: true,
+        spaceBetween: 15,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
