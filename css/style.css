@@ -1451,7 +1451,9 @@
     }
 
     .nav__services p {
-        font-weight: 500
+        font-weight: 500px;
+        color: #242424;
+        font-weight:500;
     }
 
     .nav__services ul {
